@@ -16,3 +16,6 @@
 """
 
 mac = "AAAA:BBBB:CCCC"
+mac = mac.replace('A', '1010').replace('B', '1011').replace('C',
+					'1100').split(':')
+print(''.join(mac))
