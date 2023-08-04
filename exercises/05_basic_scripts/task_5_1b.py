@@ -51,5 +51,5 @@ london_co = {
     },
 }
 name = input('Введите имя устройства: ')
-par = input('Введите имя параметра ' + ' '.join(london_co[name]) + ': ')
+par = input('Введите имя параметра (' + ' '.join(london_co[name]) + '): ')
 print(london_co[name][par])
