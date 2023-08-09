@@ -82,3 +82,13 @@ trunk = {
 #         else:
 #             print(f" {command}")
 
+
+for k, v in trunk.items():
+  print(f'interface FastEthernet{k}')
+  print(' ' + trunk_template[0])
+  print(' ' + trunk_template[1])
+  if trunk[k][0] == 'only':
+    print(' ' + trunk_template[2], ','.join(trunk[k][1:]))
+  else:
+    print(' ' + trunk_template[2], trunk[k][0].replace('del', 'remove'),
+        ','.join(trunk[k][1:]))
